@@ -12,8 +12,8 @@ urlpatterns = [
     path("api/admin/login/", admin_login_api),
     path("api/categories/add/", add_category),
     path("api/categories/", list_categories),
-    path("api/update_category/<int:category_id>/", update_category),
-    path("api/delete_category/<int:category_id>/", delete_category),
+    path("api/update_category/<int:id>/", update_category),
+    path("api/delete_category/<int:id>/", delete_category),
 
     path("api/authors/add/", add_author),
     path("api/authors/", list_authors),

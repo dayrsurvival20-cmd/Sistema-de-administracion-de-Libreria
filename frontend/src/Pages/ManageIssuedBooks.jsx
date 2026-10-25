@@ -22,7 +22,7 @@ const ManageIssuedBooks = () => {
     {
         setLoadingList(true);
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/admin/issued-books/");
+            const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/admin/issued-books/");
             setIssues(res.data);
         }catch (err) {
             console.error(err); 

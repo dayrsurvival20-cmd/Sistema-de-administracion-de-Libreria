@@ -26,7 +26,7 @@ const AddCategory = () => {
     const fetchCategories = async () => 
     {
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/categories/");
+            const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/categories/");
             setCategories(res.data);
         }catch (err) {
             console.error(err); 
@@ -38,7 +38,7 @@ const AddCategory = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/categories/add/", {name, status});
+            const res = await axios.post("https://sistema-de-administracion-de-libreria.onrender.com/api/categories/add/", {name, status});
             if(res.data.success)
             {
                 toast.success(res.data.message || "Categoría agregada exitosamente")

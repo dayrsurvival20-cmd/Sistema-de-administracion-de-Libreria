@@ -23,7 +23,7 @@ const StudentHistory = () => {
     {
         setLoading(true);
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/admin/student-history/${studentId}/`);
+            const res = await axios.get(`https://sistema-de-administracion-de-libreria.onrender.com/api/admin/student-history/${studentId}/`);
             setStudent(res.data.student);
             setIssues(res.data.issues);
         }catch (err) {

@@ -41,9 +41,9 @@ const ManageBooks = () => {
         setLoadingList(true);
         try {
             const [bookRes, categoryRes, authorRes] = await Promise.all([
-                axios.get("http://127.0.0.1:8000/api/books/"),
-                axios.get("http://127.0.0.1:8000/api/categories/"),
-                axios.get("http://127.0.0.1:8000/api/authors/")
+                axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/books/"),
+                axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/categories/"),
+                axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/authors/")
             ]);
             setBooks(bookRes.data);
             setCategories(categoryRes.data);
@@ -55,7 +55,7 @@ const ManageBooks = () => {
         finally{
             setLoadingList(false);
             try{
-                const res = await axios.get("http://127.0.0.1:8000/api/books/");
+                const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/books/");
                 setBooks(res.data);
             }
             catch (err) {
@@ -75,7 +75,7 @@ const ManageBooks = () => {
         setEditAuthor(book.author);
         setEditPrice(book.price);
         setEditQuantity(book.quantity);
-        setEditImagePreview(`http://127.0.0.1:8000/${book.cover_image}`);
+        setEditImagePreview(`https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`);
         setEditImageFile(null);
     }
 
@@ -114,7 +114,7 @@ const ManageBooks = () => {
                 formData.append("cover_image", editImageFile);
             }
 
-            const res = await axios.put(`http://127.0.0.1:8000/api/update_book/${editId}/`,
+            const res = await axios.put(`https://sistema-de-administracion-de-libreria.onrender.com/api/update_book/${editId}/`,
                 formData,
                 {
                     headers: { "Content-Type": "multipart/form-data" }
@@ -145,7 +145,7 @@ const ManageBooks = () => {
         const ok = window.confirm("¿Estas seguro de eliminar este libro?");
         if(!ok) return;
         try {
-            const res = await axios.delete(`http://127.0.0.1:8000/api/delete_book/${id}/`);
+            const res = await axios.delete(`https://sistema-de-administracion-de-libreria.onrender.com/api/delete_book/${id}/`);
             if(res.data.success)
             {
                 toast.success(res.data.message || "Libro eliminado")
@@ -311,7 +311,7 @@ const ManageBooks = () => {
                                                             <tr key={book.id}>
                                                                 <td>{index + 1}</td>
                                                                 <td style={{maxWidth:"200px"}}>
-                                                                    <img src={`http://127.0.0.1:8000/${book.cover_image}`}
+                                                                    <img src={`https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`}
                                                                     alt={book.title} className="img-fluid rounded"
                                                                     style={{maxWidth:"100px", height:"70px", marginBottom: "4px"}}/>
                                                                     <div className="fw-bold small">

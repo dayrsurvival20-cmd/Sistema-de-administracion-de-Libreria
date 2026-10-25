@@ -22,7 +22,7 @@ const ManageStudents = () => {
     {
         setLoadingList(true);
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/admin/students");
+            const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/admin/students");
             setStudents(res.data);
         }catch (err) {
             console.error(err); 
@@ -36,8 +36,8 @@ const ManageStudents = () => {
     const handleToogleStatus = async (students) =>{
         const isCurrentlyActive = students.is_active;
         const url = isCurrentlyActive ?  
-            `http://127.0.0.1:8000/api/admin/block_students/${students.id}/`:
-            `http://127.0.0.1:8000/api/admin/activate_students/${students.id}/`;
+            `https://sistema-de-administracion-de-libreria.onrender.com/api/admin/block_students/${students.id}/`:
+            `https://sistema-de-administracion-de-libreria.onrender.com/api/admin/activate_students/${students.id}/`;
 
         const confirmMessage = isCurrentlyActive ?
             `Seguro que quieres bloquear a ${students.full_name} ?`:

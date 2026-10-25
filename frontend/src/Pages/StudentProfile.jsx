@@ -27,7 +27,7 @@ const StudentProfile = () => {
         const fetchProfile = async () => {
             try{
                 setLoading(true); //api call
-                const res = await axios.get("http://127.0.0.1:8000/api/user/profile/", {
+                const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/user/profile/", {
                     params: {student_id: studentUser.student_id}
                 });
                 setProfile({
@@ -59,7 +59,7 @@ const StudentProfile = () => {
         e.preventDefault();
         try{
             setSaving(true);
-            await axios.put("http://127.0.0.1:8000/api/user/profile/", {
+            await axios.put("https://sistema-de-administracion-de-libreria.onrender.com/api/user/profile/", {
                 student_id : profile.student_id,
                 full_name : profile.full_name,
                 mobile : profile.mobile,

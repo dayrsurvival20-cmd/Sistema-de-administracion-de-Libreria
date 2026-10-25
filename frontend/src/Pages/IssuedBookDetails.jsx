@@ -25,7 +25,7 @@ const IssuedBookDetails = () => {
     {
         setLoading(true);
         try {
-            const res = await axios.get(`http://127.0.0.1:8000/api/issued-books/${id}/`);
+            const res = await axios.get(`https://sistema-de-administracion-de-libreria.onrender.com/api/issued-books/${id}/`);
             setIssue(res.data);
             if(res.data.fine){
                 setFine(res.data.fine);
@@ -52,7 +52,7 @@ const IssuedBookDetails = () => {
 
     setReturning(true);
         try{
-            const res = await axios.post(`http://127.0.0.1:8000/api/return-book/${id}/`,
+            const res = await axios.post(`https://sistema-de-administracion-de-libreria.onrender.com/api/return-book/${id}/`,
                 {fine: fine}
             );
             toast.success("Libro regresado exitosamente");
@@ -70,7 +70,7 @@ const IssuedBookDetails = () => {
 
     const bookCoverUrl = issue && issue.book_cover
         ? (issue.book_cover.startsWith("http")
-            ? issue.book_cover : `http://127.0.0.1:8000/${issue.book_cover}`)
+            ? issue.book_cover : `https://sistema-de-administracion-de-libreria.onrender.com/${issue.book_cover}`)
         :null;
 
     if(loading || !issue){

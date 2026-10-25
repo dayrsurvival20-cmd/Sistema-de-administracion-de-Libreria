@@ -38,8 +38,8 @@ const AddBook = () => {
         setLoadingDropdowns(true);
         try {
             const [authRes, catRes] = await Promise.all([
-                axios.get("http://127.0.0.1:8000/api/authors/"),
-                axios.get("http://127.0.0.1:8000/api/categories/")
+                axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/authors/"),
+                axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/categories/")
             ])
             const activeCats = (catRes.data).filter((c) => c.is_active); 
             setCategories(activeCats);
@@ -70,7 +70,7 @@ const AddBook = () => {
         }
         setLoading(true);
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/books/add/", formData, {
+            const res = await axios.post("https://sistema-de-administracion-de-libreria.onrender.com/api/books/add/", formData, {
                 headers :{
                     'Content-Type': 'multipart/form-data',
                 }

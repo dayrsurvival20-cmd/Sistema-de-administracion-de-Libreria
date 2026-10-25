@@ -39,7 +39,7 @@ const AdminChangePassword = () => {
 
         setLoading(true);
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/change_admin_password/", { username: adminUser, current_password: currentPassword, new_password: newPassword, confirm_password: confirmPassword });
+            const res = await axios.post("https://sistema-de-administracion-de-libreria.onrender.com/api/change_admin_password/", { username: adminUser, current_password: currentPassword, new_password: newPassword, confirm_password: confirmPassword });
             if(res.data.success)
             {
                 toast.success(res.data.message || "Contraseña cambiada exitosamente")

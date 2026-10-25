@@ -23,7 +23,7 @@ const AdminDashboard = () =>
     const fetchStats = async () => {
         setLoading(true);
         try{
-            const res = await axios.get("http://127.0.0.1:8000/api/admin/stats/");
+            const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/admin/stats/");
             setStats(res.data);
         }catch (error){
             toast.error("Fallo en obtener los estados del administrador.");

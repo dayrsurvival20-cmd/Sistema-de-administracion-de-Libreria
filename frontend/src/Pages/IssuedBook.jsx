@@ -31,7 +31,7 @@ const IssuedBook = () => {
         setStudent(null);
         setStudentLoading(true);
         try{
-            const res = await axios.get(`http://127.0.0.1:8000/api/students/by-id/?student_id=${studentId}`);
+            const res = await axios.get(`https://sistema-de-administracion-de-libreria.onrender.com/api/students/by-id/?student_id=${studentId}`);
             setStudent(res.data);
         }catch(error){
             toast.error("Estudiante no encontrado.")
@@ -48,7 +48,7 @@ const IssuedBook = () => {
         setBook(null);
         setBookLoading(true);
         try{
-            const res = await axios.get(`http://127.0.0.1:8000/api/books/lookup/?q=${bookQuery}`);
+            const res = await axios.get(`https://sistema-de-administracion-de-libreria.onrender.com/api/books/lookup/?q=${bookQuery}`);
             setBook(res.data.book);
         }catch(error){
             toast.error("Libro no encontrado.")
@@ -68,7 +68,7 @@ const IssuedBook = () => {
         }
         setIssuing(true);
         try{
-            const res = await axios.post(`http://127.0.0.1:8000/api/admin/issue_book/`, {
+            const res = await axios.post(`https://sistema-de-administracion-de-libreria.onrender.com/api/admin/issue_book/`, {
                 student_id :  student.student_id,
                 book_id : book.id,
                 remark : remark
@@ -89,7 +89,7 @@ const IssuedBook = () => {
 
     const bookCoverUrl = book && book.cover_image 
         ? (book.cover_image.startsWith("http")
-            ? book.cover_image : `http://127.0.0.1:8000/${book.cover_image}`)
+            ? book.cover_image : `https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`)
         :null;
 
     return (

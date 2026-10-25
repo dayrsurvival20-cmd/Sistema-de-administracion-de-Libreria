@@ -23,7 +23,7 @@ const StudentBooks = () => {
         const fetchBooks = async () => {
             try{
                 setLoading(true); //api call
-                const res = await axios.get("http://127.0.0.1:8000/api/user/books/");
+                const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/user/books/");
                 setBooks(res.data);
                 setFiltered(res.data);
             }catch (err){
@@ -58,7 +58,7 @@ const StudentBooks = () => {
         if(book.cover_image.startsWith("http://")){
             return book.cover_image
         }
-        return `http://127.0.0.1:8000/${book.cover_image}`;
+        return `https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`;
     };
 
     return (
@@ -105,7 +105,7 @@ const StudentBooks = () => {
                             <div className='col-md-4' key={book.id}>
                                 <div className='card border-0 shadow-sm h-100 rounded-4'>
                                     <div className='bg-light d-flex align-items-center justify-content-center rounded-top' style={{height:"200px"}}>
-                                        {/*<img src={`http://127.0.0.1:8000/${book.cover_image}`} alt={book.title} style={{maxHeight:"180px", objectFit:"contain"}}/>*/}
+                                        {/*<img src={`https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`} alt={book.title} style={{maxHeight:"180px", objectFit:"contain"}}/>*/}
                                         {getCoverURL(book) ? (
                                             <img src={getCoverURL(book)} alt={book.title} style={{maxHeight:"180px", objectFit:"contain"}}></img>
                                         ):(

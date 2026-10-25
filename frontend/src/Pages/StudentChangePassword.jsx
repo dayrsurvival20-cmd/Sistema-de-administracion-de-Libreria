@@ -41,7 +41,7 @@ const StudentChangePassword = () => {
 
         try{
             setSaving(true);
-            const res = await axios.post("http://127.0.0.1:8000/api/user/change_password/", {
+            const res = await axios.post("https://sistema-de-administracion-de-libreria.onrender.com/api/user/change_password/", {
                 student_id : studentUser.student_id,
                 current_password : form.current_password,
                 new_password : form.new_password,

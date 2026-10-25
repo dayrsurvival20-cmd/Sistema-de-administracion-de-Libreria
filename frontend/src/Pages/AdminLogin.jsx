@@ -14,7 +14,7 @@ const AdminLogin = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/admin/login/", {username, password});
+            const res = await axios.post("https://sistema-de-administracion-de-libreria.onrender.com/api/admin/login/", {username, password});
             if(res.status === 200)
             {
                 toast.success(res.data.message || "Sesion exitosa")

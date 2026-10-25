@@ -91,7 +91,7 @@ const AddAuthors = () => {
                                             </>
                                         ): (
                                             <>
-                                                <i className='fa-solid fa-plus'></i>AUTOR AÑADIDO   
+                                                <i className='fa-solid fa-plus'></i>AÑADIR AUTOR
                                             </>
                                         )}
                                         

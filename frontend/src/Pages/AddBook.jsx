@@ -59,14 +59,14 @@ const AddBook = () => {
         setLoading(true);
 
         const formData = new FormData();
-        formData.append("titulo", title);
-        formData.append("categoria", category);
-        formData.append("autor", author);
-        formData.append("ISBN", isbn);
-        formData.append("precio", price);
-        formData.append("cantidad", quantity);
+        formData.append("title", title);
+        formData.append("category", category);
+        formData.append("author", author);
+        formData.append("isbn", isbn);
+        formData.append("price", price);
+        formData.append("quantituy", quantity);
         if(coverFile){
-            formData.append('Imagen de covertura', coverFile);
+            formData.append('cover_image', coverFile);
         }
         setLoading(true);
         try {

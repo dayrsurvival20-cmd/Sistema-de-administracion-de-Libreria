@@ -25,7 +25,7 @@ const AddAuthors = () => {
     const fetchAuthors = async () => 
     {
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/authors/");
+            const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/authors/");
             setAuthors(res.data);
         }catch (err) {
             console.error(err); 
@@ -37,7 +37,7 @@ const AddAuthors = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const res = await axios.post("http://127.0.0.1:8000/api/authors/add/", {name});
+            const res = await axios.post("https://sistema-de-administracion-de-libreria.onrender.com/api/authors/add/", {name});
             if(res.data.success)
             {
                 toast.success(res.data.message || "Autor agregado exitosamente")

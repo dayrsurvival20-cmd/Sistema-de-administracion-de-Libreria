@@ -29,7 +29,7 @@ const ManageCategories = () => {
     {
         setLoadingList(true);
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/categories/");
+            const res = await axios.get(" https://sistema-de-administracion-de-libreria.onrender.com/api/categories/");
             setCategories(res.data);
         }catch (err) {
             console.error(err); 

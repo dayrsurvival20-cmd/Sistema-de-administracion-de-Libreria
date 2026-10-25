@@ -84,7 +84,7 @@ const ManageCategories = () => {
         if(!ok) return;
         setSaving(true); 
         try {
-            const res = await axios.delete(`http://127.0.0.1:8000/api/delete_category/${id}/`);
+            const res = await axios.delete(` https://sistema-de-administracion-de-libreria.onrender.com/api/delete_category/${id}/`);
             if(res.data.success)
             {
                 toast.success(res.data.message || "Categoría eliminada")

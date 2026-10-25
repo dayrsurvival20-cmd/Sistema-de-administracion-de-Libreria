@@ -311,7 +311,7 @@ const ManageBooks = () => {
                                                             <tr key={book.id}>
                                                                 <td>{index + 1}</td>
                                                                 <td style={{maxWidth:"200px"}}>
-                                                                    <img src={`https://sistema-de-administracion-de-libreria.onrender.com/media/${book.cover_image}`}
+                                                                    <img src={`https://sistema-de-administracion-de-libreria.onrender.com${book.cover_image}`}
                                                                     alt={book.title} className="img-fluid rounded"
                                                                     style={{maxWidth:"100px", height:"70px", marginBottom: "4px"}}/>
                                                                     <div className="fw-bold small">

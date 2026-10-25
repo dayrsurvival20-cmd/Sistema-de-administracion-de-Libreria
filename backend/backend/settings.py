@@ -49,8 +49,7 @@ CORS_ALLOWED_ORIGINS = [
     "https://libreria-e7457.web.app",
 ]
 
-CS_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
+CSRF_TRUSTED_ORIGINS = [
     "https://libreria-e7457.web.app",
 ]
 
@@ -141,6 +140,9 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },

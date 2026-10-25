@@ -28,7 +28,7 @@ const ManageAuthors = () => {
     {
         setLoadingList(true);
         try {
-            const res = await axios.get("http://127.0.0.1:8000/api/authors/");
+            const res = await axios.get("https://sistema-de-administracion-de-libreria.onrender.com/api/authors/");
             setAuthors(res.data);
         }catch (err) {
             console.error(err); 
@@ -53,7 +53,7 @@ const ManageAuthors = () => {
         e.preventDefault();
         setSaving(true);
         try {
-            const res = await axios.put(`http://127.0.0.1:8000/api/update_author/${editId}/`, {name:editName});
+            const res = await axios.put(`https://sistema-de-administracion-de-libreria.onrender.com/api/update_author/${editId}/`, {name:editName});
             if(res.data.success)
             {
                 toast.success(res.data.message || "Autor actualizado")
@@ -79,7 +79,7 @@ const ManageAuthors = () => {
         const ok = window.confirm("¿Estas seguro de eliminar este autor?");
         if(!ok) return;
         try {
-            const res = await axios.delete(`http://127.0.0.1:8000/api/delete_author/${id}/`);
+            const res = await axios.delete(`https://sistema-de-administracion-de-libreria.onrender.com/api/delete_author/${id}/`);
             if(res.data.success)
             {
                 toast.success(res.data.message || "Autor eliminado")

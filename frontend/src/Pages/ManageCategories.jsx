@@ -206,7 +206,7 @@ const ManageCategories = () => {
                                                                 <td>{category.name}</td>
                                                                 <td>
                                                                     <span className={`badge ${category.is_active ? "bg-success" : "bg-secondary"}`}>
-                                                                        {category.is_active === "1" ? "Activo" : "Inactivo"}
+                                                                        {category.is_active ? "Activo" : "Inactivo"}
                                                                     </span>
                                                                 </td>
                                                                 <td className='small text-mute'>{new Date(category.created_at).toLocaleDateString()}</td>

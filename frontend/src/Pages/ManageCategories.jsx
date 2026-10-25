@@ -57,7 +57,7 @@ const ManageCategories = () => {
         setSaving(true);
         try {
             const res = await axios.put(` https://sistema-de-administracion-de-libreria.onrender.com/api/update_category/${editId}/`,
-                {name:editName}, {status:editStatus});
+                {name:editName, status:editStatus});
             if(res.data.success)
             {
                 toast.success(res.data.message || "Categoría actualizada")

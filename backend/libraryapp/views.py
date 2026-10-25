@@ -176,7 +176,7 @@ def add_book(request):
     title = request.data.get("title")
     author_id = request.data.get("author")
     category_id = request.data.get("category")
-    isbn = request.data.get("isbn")
+    isbn = request.data.get("ISBN")
     price = request.data.get("price")
     quantity = request.data.get("quantity")
     cover_image = request.FILES.get("cover_image")

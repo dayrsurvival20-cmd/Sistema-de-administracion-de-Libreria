@@ -75,7 +75,7 @@ const ManageBooks = () => {
         setEditAuthor(book.author);
         setEditPrice(book.price);
         setEditQuantity(book.quantity);
-        setEditImagePreview(`https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`);
+        setEditImagePreview(`https://sistema-de-administracion-de-libreria.onrender.com${book.cover_image}`);
         setEditImageFile(null);
     }
 

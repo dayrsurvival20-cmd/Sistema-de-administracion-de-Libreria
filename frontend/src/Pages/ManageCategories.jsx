@@ -205,8 +205,8 @@ const ManageCategories = () => {
                                                                 <td>{index + 1}</td>
                                                                 <td>{category.name}</td>
                                                                 <td>
-                                                                    <span className={`badge ${category.status === "1" ? "bg-success" : "bg-secondary"}`}>
-                                                                        {category.status === "1" ? "Activo" : "Inactivo"}
+                                                                    <span className={`badge ${category.is_active === "1" ? "bg-success" : "bg-secondary"}`}>
+                                                                        {category.is_active === "1" ? "Activo" : "Inactivo"}
                                                                     </span>
                                                                 </td>
                                                                 <td className='small text-mute'>{new Date(category.created_at).toLocaleDateString()}</td>

@@ -173,46 +173,55 @@ from rest_framework.parsers import MultiPartParser, FormParser
 @api_view(["POST"])
 @parser_classes([MultiPartParser, FormParser])
 def add_book(request):
-    title = request.data.get("title")
-    author_id = request.data.get("author")
-    category_id = request.data.get("category")
-    isbn = request.data.get("isbn")
-    price = request.data.get("price")
-    quantity = request.data.get("quantity")
-    cover_image = request.FILES.get("cover_image")
+    try:
+        title = request.data.get("title")
+        author_id = request.data.get("author")
+        category_id = request.data.get("category")
+        isbn = request.data.get("isbn")
+        price = request.data.get("price")
+        quantity = request.data.get("quantity")
+        cover_image = request.FILES.get("cover_image")
 
-    author = Author.objects.get(id=author_id)
-    category = Category.objects.get(id=category_id)
+        author = Author.objects.get(id=author_id)
+        category = Category.objects.get(id=category_id)
 
-    if Book.objects.filter(isbn=isbn).exists():
-        return Response(
-            {
-                "success" : False,
-                "message" : "Libro con este codigo ISBN ya existe, por favor, usa un diferente ISBN"
-            },
-            status = status.HTTP_400_BAD_REQUEST 
+        if Book.objects.filter(isbn=isbn).exists():
+            return Response(
+                {
+                    "success" : False,
+                    "message" : "Libro con este codigo ISBN ya existe, por favor, usa un diferente ISBN"
+                },
+                status = 400
+            )
+
+        book = Book.objects.create(
+            title=title,
+            author=author,
+            category=category,
+            isbn=isbn,
+            price=price,
+            quantity=quantity,
+            cover_image=cover_image
         )
 
-    book = Book.objects.create(
-        title=title,
-        author=author,
-        category=category,
-        isbn=isbn,
-        price=price,
-        quantity=quantity,
-        cover_image=cover_image
-    )
+        serializer = Bookserializer(book)
 
-    serializer = Bookserializer(book)
-
-    return Response(
-        {
-            "success" : True,
-            "message" : "libro agregada exitosamente",
-            "book" : serializer.data,
-        },
-        status= status.HTTP_201_CREATED
-    )
+        return Response(
+            {
+                "success" : True,
+                #"message" : "libro agregada exitosamente",
+                "book" : serializer.data,
+            },
+            status= 201
+        )
+    except Exception as e:
+        return Response(
+            {
+                "success": False,
+                "error": str(e)
+            },
+            status=500
+        )
 
 @api_view(["PUT"])
 @parser_classes([MultiPartParser, FormParser])

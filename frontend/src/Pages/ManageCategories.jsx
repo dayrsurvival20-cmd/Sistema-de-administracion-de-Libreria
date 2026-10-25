@@ -205,7 +205,7 @@ const ManageCategories = () => {
                                                                 <td>{index + 1}</td>
                                                                 <td>{category.name}</td>
                                                                 <td>
-                                                                    <span className={`badge ${category.is_active === "1" ? "bg-success" : "bg-secondary"}`}>
+                                                                    <span className={`badge ${category.is_active ? "bg-success" : "bg-secondary"}`}>
                                                                         {category.is_active === "1" ? "Activo" : "Inactivo"}
                                                                     </span>
                                                                 </td>

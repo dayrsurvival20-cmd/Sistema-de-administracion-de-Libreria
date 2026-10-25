@@ -139,8 +139,17 @@ const ManageCategories = () => {
                                     </div>
 
                                     <div className='mb-3'>
-                                            <input type='radio' className='form-check-input' value="0" checked={editStatus === "0"} onChange={(e)=>setEditStatus(e.target.value)} id="status-inactive" name="status"/>
-                                            <label className='form-check-label small' htmlFor='status-inactive'>Estado</label>
+                                        <label className='form-label small fw-medium'>Estado</label>
+                                        <div className='d-flex gap-3'>
+                                            <div className='form-check'>
+                                                <input type='radio' className='form-check-input' value="1" checked={editStatus === "1"} onChange={(e)=>setEditStatus(e.target.value)} id="status-active" name="status"/>
+                                                <label className='form-check-label small' htmlFor='status'>ACTIVO</label>
+                                            </div>
+                                            <div className='form-check'>
+                                                <input type='radio' className='form-check-input' value="0" checked={editStatus === "0"} onChange={(e)=>setEditStatus(e.target.value)} id="status-inactive" name="status"/>
+                                                <label className='form-check-label small' htmlFor='status'>INACTIVO</label>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <button type='submit' className='btn btn-primary w-100' disabled={saving}>

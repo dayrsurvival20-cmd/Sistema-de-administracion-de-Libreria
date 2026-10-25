@@ -1,0 +1,29 @@
+"filename", "language", "JavaScript", "JavaScript JSX", "XML", "Markdown", "JSON", "PostCSS", "HTML", "comment", "blank", "total"
+"c:\LMSReact\frontend\README.md", "Markdown", 0, 0, 0, 9, 0, 0, 0, 0, 8, 17
+"c:\LMSReact\frontend\eslint.config.js", "JavaScript", 20, 0, 0, 0, 0, 0, 0, 0, 2, 22
+"c:\LMSReact\frontend\index.html", "HTML", 0, 0, 0, 0, 0, 0, 16, 0, 1, 17
+"c:\LMSReact\frontend\package-lock.json", "JSON", 0, 0, 0, 0, 2848, 0, 0, 0, 1, 2849
+"c:\LMSReact\frontend\package.json", "JSON", 0, 0, 0, 0, 30, 0, 0, 0, 1, 31
+"c:\LMSReact\frontend\public\favicon.svg", "XML", 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"c:\LMSReact\frontend\public\icons.svg", "XML", 0, 0, 24, 0, 0, 0, 0, 0, 1, 25
+"c:\LMSReact\frontend\src\App.css", "PostCSS", 0, 0, 0, 0, 0, 158, 0, 0, 27, 185
+"c:\LMSReact\frontend\src\App.jsx", "JavaScript JSX", 0, 40, 0, 0, 0, 0, 0, 0, 4, 44
+"c:\LMSReact\frontend\src\Components\Header.jsx", "JavaScript JSX", 0, 211, 0, 0, 0, 0, 0, 0, 28, 239
+"c:\LMSReact\frontend\src\Pages\AddAuthors.jsx", "JavaScript JSX", 0, 134, 0, 0, 0, 0, 0, 0, 11, 145
+"c:\LMSReact\frontend\src\Pages\AddBook.jsx", "JavaScript JSX", 0, 193, 0, 0, 0, 0, 0, 0, 25, 218
+"c:\LMSReact\frontend\src\Pages\AddCategory.jsx", "JavaScript JSX", 0, 156, 0, 0, 0, 0, 0, 0, 15, 171
+"c:\LMSReact\frontend\src\Pages\AdminChangePassword.jsx", "JavaScript JSX", 0, 138, 0, 0, 0, 0, 0, 0, 14, 152
+"c:\LMSReact\frontend\src\Pages\AdminDashboard.jsx", "JavaScript JSX", 0, 11, 0, 0, 0, 0, 0, 0, 4, 15
+"c:\LMSReact\frontend\src\Pages\AdminLogin.jsx", "JavaScript JSX", 0, 96, 0, 0, 0, 0, 0, 0, 9, 105
+"c:\LMSReact\frontend\src\Pages\ManageAuthors.jsx", "JavaScript JSX", 0, 196, 0, 0, 0, 0, 0, 0, 15, 211
+"c:\LMSReact\frontend\src\Pages\ManageBooks.jsx", "JavaScript JSX", 0, 325, 0, 0, 0, 0, 0, 0, 26, 351
+"c:\LMSReact\frontend\src\Pages\ManageCategories.jsx", "JavaScript JSX", 0, 209, 0, 0, 0, 0, 0, 0, 16, 225
+"c:\LMSReact\frontend\src\Pages\StudentDashboard.jsx", "JavaScript JSX", 0, 88, 0, 0, 0, 0, 0, 0, 10, 98
+"c:\LMSReact\frontend\src\Pages\UserLogin.jsx", "JavaScript JSX", 0, 96, 0, 0, 0, 0, 0, 0, 11, 107
+"c:\LMSReact\frontend\src\Pages\UserSignUp.jsx", "JavaScript JSX", 0, 122, 0, 0, 0, 0, 0, 7, 16, 145
+"c:\LMSReact\frontend\src\assets\react.svg", "XML", 0, 0, 1, 0, 0, 0, 0, 0, 0, 1
+"c:\LMSReact\frontend\src\assets\vite.svg", "XML", 0, 0, 1, 0, 0, 0, 0, 0, 1, 2
+"c:\LMSReact\frontend\src\index.css", "PostCSS", 0, 0, 0, 0, 0, 100, 0, 0, 12, 112
+"c:\LMSReact\frontend\src\main.jsx", "JavaScript JSX", 0, 11, 0, 0, 0, 0, 0, 0, 2, 13
+"c:\LMSReact\frontend\vite.config.js", "JavaScript", 5, 0, 0, 0, 0, 0, 0, 1, 2, 8
+"Total", "-", 25, 2026, 27, 9, 2878, 258, 16, 8, 262, 5509

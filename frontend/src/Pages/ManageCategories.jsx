@@ -139,8 +139,8 @@ const ManageCategories = () => {
                                     </div>
 
                                     <div className='mb-3'>
-                                        <label className='form-label small fw-medium'>Estado</label>
-                                            <input type='text' className='form-control' placeholder='Ej: Ciencia, Programacion, Historia, etc' required value="1" checked={editStatus === "1"} onChange={(e)=>setEditStatus(e.target.value)}/>
+                                        <label className='form-check-label small' htmlFor='status-inactive'>Estado</label>
+                                            <input type='radio' className='form-check-input' value="0" checked={editStatus === "0"} onChange={(e)=>setEditStatus(e.target.value)} id="status-inactive" name="status"/>
                                     </div>
 
                                     <button type='submit' className='btn btn-primary w-100' disabled={saving}>

@@ -64,7 +64,7 @@ const AddBook = () => {
         formData.append("author", author);
         formData.append("isbn", isbn);
         formData.append("price", price);
-        formData.append("quantituy", quantity);
+        formData.append("quantity", quantity);
         if(coverFile){
             formData.append('cover_image', coverFile);
         }

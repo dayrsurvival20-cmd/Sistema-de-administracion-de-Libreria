@@ -89,7 +89,7 @@ const IssuedBook = () => {
 
     const bookCoverUrl = book && book.cover_image 
         ? (book.cover_image.startsWith("http")
-            ? book.cover_image : `https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`)
+            ? book.cover_image : `https://sistema-de-administracion-de-libreria.onrender.com${book.cover_image}`)
         :null;
 
     return (

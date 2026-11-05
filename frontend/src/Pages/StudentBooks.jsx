@@ -55,7 +55,7 @@ const StudentBooks = () => {
         if(!book.cover_image){
             return null
         }
-        if(book.cover_image.startsWith("http://")){
+        if(book.cover_image.startsWith("https://")){
             return book.cover_image
         }
         return `https://sistema-de-administracion-de-libreria.onrender.com/${book.cover_image}`;

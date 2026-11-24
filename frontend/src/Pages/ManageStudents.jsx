@@ -70,7 +70,7 @@ const ManageStudents = () => {
                             </p>
                         </div>
                         <button className='btn btn-primary btn-sm rounded-pill px-3'
-                            onClick={() => navigate("/admin/issued_books")}>
+                            onClick={() => navigate("/admin/issued-books")}>
                             Libros emitidos
                         </button>
                     </div>
